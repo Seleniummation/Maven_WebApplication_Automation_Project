@@ -23,7 +23,7 @@ public class SignIn extends aDriver {
 
        new WebDriverWait(driver, 120).until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='nav-link-yourAccount']/span[2]/span")));
 
-        WebElement mail2 = driver.findElement(By.xpath(".//*[@id='nav-link-yourAccount']/span[2]/span"));
+        WebElement mail2 = driver.findElement(By.xpath(".//*[@id='nav-link-yourAccount']/span[1]/span"));
         mail2.click();
         return new SignIn();
     }
