@@ -38,7 +38,7 @@ public class AccountTest extends aDriver {
         {
             try {
                 // Open the Excel file
-                FileInputStream fis = new FileInputStream(System.getProperty("user.directory") + "//" + "src//main//resources//AmazonTestData.xls");
+                FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "//" + "src//main//resources//AmazonTestData.xls");
                 // Access the required test data sheet
                 HSSFWorkbook wb = new HSSFWorkbook(fis);
                 HSSFSheet sheet = wb.getSheet("Login");
