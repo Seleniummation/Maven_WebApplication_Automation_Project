@@ -23,7 +23,7 @@ public class SignIn extends aDriver {
 
        new WebDriverWait(driver, 120).until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='nav-link-yourAccount']/span[2]/span")));
 
-        WebElement mail2 = driver.findElement(By.xpath(".//*[@id='nav-link-yourAccount']/span[1]/span"));
+        WebElement mail2 = driver.findElement(By.xpath(".//*[@id='nav-link-yourAccount']/span[2]/span"));
         mail2.click();
         return new SignIn();
     }
@@ -47,6 +47,8 @@ public class SignIn extends aDriver {
 
     public SignIn submitForm (){
 
+        java.lang.String customerId="";
+
         WebElement signInBtn = driver.findElement(By.cssSelector("#signInSubmit"));
         signInBtn.click();
 
@@ -59,10 +61,13 @@ public class SignIn extends aDriver {
 
         new WebDriverWait(driver,80).until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='nav-link-yourAccount']/span[1]")));
 
-        WebElement usrNamFld = driver.findElement(By.xpath(".//*[@id='nav-link-yourAccount']/span[1]"));
-        usrNamFld.getText();
 
-        System.out.println(usrNamFld.getText());
+            WebElement usrNamFld = driver.findElement(By.xpath(".//*[@id='nav-link-yourAccount']/span[1]"));
+            usrNamFld.getText();
+
+            System.out.println(usrNamFld.getText());
+
+
 
         return new java.lang.String();
     }
